@@ -1,0 +1,1103 @@
+@charset "UTF-8";
+/* RESET */
+
+img{display: block;}
+.hidden{display: none;}
+
+/* 공통 스타일 */
+body{
+    color: #333;
+    font: 16px;
+    font-weight: 400px;
+    line-height: 1.4;
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+}
+
+/* mobile------------- */
+
+    .wrap{
+        width: 100%;
+        background: rgb(213, 213, 192);
+    }
+    
+    /* 모바일-헤더영역 */
+    header{
+        width: 100%;
+        height: 100px;
+    }
+    
+    header h1 a{
+        position: absolute;
+        left: 35%;
+        top: 20px;
+    }
+
+    header h1 a img{
+        width: 40%;
+    }
+    
+    /* 햄버거메뉴 */
+    .menu-toggle-btn{position: absolute;top: 30px;left: 20px;width: 30px;height: 20px;display: block;cursor: pointer;z-index: 50;}
+    .menu-toggle-btn span{display: block;width: 100%;height: 2px;background: #333;}
+    .menu-toggle-btn span:nth-child(2){margin: 5px 0;}
+    
+    /* 태블릿 - nav 왼쪽에서 오른쪽으로 등장 */
+    /* 1.안보이게 왼쪽으로 */
+    .mo-nav{position: fixed;top: 0;left: 0;width: 300px;height: 100%;z-index: 100;background: rgb(101, 101, 101);transition: all 0.2s;opacity: 0;transform: translateX(-300px);}
+    
+    /* 2.보이면서 오른쪽으로 부드럽게 등장 */
+    .mo-nav.ison{opacity: 1;transform: translateX(0);}
+    
+    /* #nav-mo 안에 있는 1차,2차 메뉴 꾸미기 */
+    .mo-nav ul.menu{margin: 100px 0 0 20px;}
+    .mo-nav ul.menu > li{border-bottom: 1px solid #fff;}
+    .mo-nav ul.menu > li > a{color: #fff;font-size: 18px;padding: 20px 0;display: block;}
+    .mo-nav ul.menu > li > ul.submenu{padding-left: 20px;display: none;}
+    .mo-nav ul.menu > li > ul.submenu li a{color: #fff;font-size: 14px;display: block;padding: 8px 0;}
+    
+    /* 슬라이드메뉴 검은색 배경 */
+    /* 1.검정색 배경이 안보일때 */
+    .slide-fade{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000;opacity: 0;visibility: hidden;z-index: 99;transition: all 0.2s;}
+    
+    /* 2.검정색 배경이 보일때 => 사용자가 햄버거 메뉴를 누른상태 */
+    .slide-fade.ison{opacity: 0.7;visibility: visible;}
+    
+    
+    /* pc 메뉴 숨김 */
+    .pc-nav{display: none;}
+    
+    /* 태블릿 서브 메뉴 */
+    
+    header div.sub-menu{display: flex;position: absolute;right: 20px;top: 50px;font-family: Arial, Helvetica, sans-serif;}
+    header div.sub-menu ul.login-menu{display: flex;}
+    header div.sub-menu ul.login-menu li{position: relative;}
+    header div.sub-menu ul.login-menu li:first-child:before{display: none;}
+    header div.sub-menu ul.login-menu li a{font-size: 12px;display: block;padding: 10px 10px;color: #333;}
+    
+    
+    header .icons{
+        display: flex;
+        position: relative;
+        right: 0;
+        bottom: 5px;
+        top: 5px;
+    }
+    header .icons li:nth-child(2){
+        position: relative;
+        top: 4px;
+        left: 10px;
+    }
+    
+    
+    /* 슬라이드 영역: 좌우 */
+    .visual{
+        clear: both;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+    
+    
+    /* what you want 영역 */
+    
+    section.contents1 .inner{
+        width: 100%;
+        height: 500px;
+        margin-top: 100px;
+        clear: both;
+        position: relative;
+        padding-left: 40px;
+    }
+    
+    section.contents1 .inner li{
+        float: left;
+    }
+    
+    section.contents1 h2{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    section.contents1 p{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+    
+    section.contents1 ul li{
+        overflow: hidden;
+    }
+    
+    section.contents1 ul li a:hover img{
+        transform: scale(1.4);
+    }
+    
+    section.contents1 ul li a img{
+        transition : all 2.5s ease;   
+    }
+    
+    section.contents1 img{
+        width: 200px;
+    }
+    
+    
+    /* make you lovely 영역 */
+    
+    section.contents2{
+        width: 100%;
+        height: 1000px;
+        margin-top: 150px;
+    }
+    
+    section.contents2 .miumiu-bg1{
+        opacity: 50%;
+    }
+    
+    section.contents2 h2{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        top: 30px;
+    }
+    
+    section.contents2 p{
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        top: 40px;
+    }
+    
+    section.contents2 .left-slide{
+        width: 40%;
+        height: 35%;
+        overflow: hidden;
+        position: absolute;
+        left: 20px;
+    
+    }
+    
+    section.contents2 .right-contents{
+        width: 55%;
+        height: 33%;
+        overflow: hidden;
+        position: relative;
+        right: -220px;
+        top: -30px;
+    
+    }
+    
+    section.contents2 .right-contents ul li{
+        float: left;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        width: 50%;
+    
+    }
+    
+    
+    section.contents2 .right-contents ul li:nth-child(1):hover{
+        content: url(../image/bag1_hover.png);
+    }
+    section.contents2 .right-contents ul li:nth-child(2):hover{
+        content: url(../image/bag2_hover.png);
+    }
+    
+    section.contents2 .right-contents ul li:nth-child(3):hover{
+        content: url(../image/bag3_hover.png);
+    }
+    section.contents2 .right-contents ul li:nth-child(4):hover{
+        content: url(../image/bag4_hover.png);
+    }
+    
+    /* 뉴스&이벤트 영역 */
+    section.news{
+        width: 100%;
+        height: 500px;
+        position: relative;
+        top: -300px;
+    }
+    section.news .new-bg{
+        width: 140px;
+        height: 856;
+        position: absolute;
+        right: 70px;
+        opacity: 50%;
+    }
+    
+    section.news h2{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 70px;
+    }
+    
+    section.news p{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+    
+    section.news .swiper-button-next{
+        color: #fff;
+        opacity: 50%;
+        right: 8px;
+        top: 270px;
+    }
+    
+    
+    section.news .swiper-button-prev{
+        color: #fff;
+        opacity: 50%;
+        right: 8px;
+        top: 270px;
+    }
+    
+    section.news .swiper-pagination{
+        top: 350px;
+    }
+    
+    
+    /* 인스타그램 영역 */
+    .instargram{
+        width: 100%;
+        height: 300px;
+        position: relative;
+        top: -300px;
+    }
+    
+    .instargram .inner h2{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 0px;
+    }
+    
+    .instargram .inner p{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    .mySwiper2 .swiper-slide{
+        text-align: center;
+        background: #fff;
+    
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    footer{
+        width: 100%;
+        height: 300px;
+        background: #F1F1F1;
+        margin: auto;   
+    }
+    
+    footer .bottom-logo{
+        width: 30%;
+        height: 40px;
+        position: relative;
+        top: 50px;
+    }
+    
+    footer address{
+        width: 60%;
+        height: 110px;
+        position: relative;
+        bottom: 110px;
+        left:180px;
+        font-size: 10px;
+    }
+    
+    footer ul.menu{
+        width: 400px;
+        display: flex;
+        position: relative;
+        top:170px;
+        left: 20px;
+        justify-content: space-between;
+        font-size: 10px;
+    }
+    
+    footer .sns{
+        width: 150px;
+        height: 100px;
+        position: relative;
+        left: 180px;
+        top: 200px;
+    }
+    
+    footer div.sns ul{display: flex;justify-content: space-around;}
+    
+    footer p{
+        width: 600px;
+        position: relative;
+        left:100px;
+        bottom: 30px;
+        font-size: 13px;
+    }
+    
+    
+    
+    
+    
+
+
+/* tab---------------- */
+@media all and (min-width:768px){
+
+.wrap{
+    width: 100%;
+    background: rgb(213, 213, 192);
+}
+
+/* 태블릿-헤더영역 */
+header{
+    width: 100%;
+    height: 100px;
+}
+
+header h1 a{
+    position: absolute;
+    left: 40%;
+    top: 20px;
+}
+
+/* 햄버거메뉴 */
+.menu-toggle-btn{position: absolute;top: 30px;left: 20px;width: 30px;height: 20px;display: block;cursor: pointer;z-index: 50;}
+.menu-toggle-btn span{display: block;width: 100%;height: 2px;background: #333;}
+.menu-toggle-btn span:nth-child(2){margin: 5px 0;}
+
+/* 태블릿 - nav 왼쪽에서 오른쪽으로 등장 */
+/* 1.안보이게 왼쪽으로 */
+.mo-nav{position: fixed;top: 0;left: 0;width: 300px;height: 100%;z-index: 100;background: rgb(101, 101, 101);transition: all 0.2s;opacity: 0;transform: translateX(-300px);}
+
+/* 2.보이면서 오른쪽으로 부드럽게 등장 */
+.mo-nav.ison{opacity: 1;transform: translateX(0);}
+
+/* #nav-mo 안에 있는 1차,2차 메뉴 꾸미기 */
+.mo-nav ul.menu{margin: 100px 0 0 20px;}
+.mo-nav ul.menu > li{border-bottom: 1px solid #fff;}
+.mo-nav ul.menu > li > a{color: #fff;font-size: 18px;padding: 20px 0;display: block;}
+.mo-nav ul.menu > li > ul.submenu{padding-left: 20px;display: none;}
+.mo-nav ul.menu > li > ul.submenu li a{color: #fff;font-size: 14px;display: block;padding: 8px 0;}
+
+/* 슬라이드메뉴 검은색 배경 */
+/* 1.검정색 배경이 안보일때 */
+.slide-fade{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000;opacity: 0;visibility: hidden;z-index: 99;transition: all 0.2s;}
+
+/* 2.검정색 배경이 보일때 => 사용자가 햄버거 메뉴를 누른상태 */
+.slide-fade.ison{opacity: 0.7;visibility: visible;}
+
+
+/* pc 메뉴 숨김 */
+.pc-nav{display: none;}
+
+/* 태블릿 서브 메뉴 */
+
+header div.sub-menu{display: flex;position: absolute;right: 20px;top: 50px;font-family: Arial, Helvetica, sans-serif;}
+header div.sub-menu ul.login-menu{display: flex;}
+header div.sub-menu ul.login-menu li{position: relative;}
+header div.sub-menu ul.login-menu li:first-child:before{display: none;}
+header div.sub-menu ul.login-menu li a{font-size: 12px;display: block;padding: 10px 10px;color: #333;}
+
+
+header .icons{
+    display: flex;
+    position: relative;
+    right: 0;
+    bottom: 5px;
+    top: 5px;
+}
+header .icons li:nth-child(2){
+    position: relative;
+    top: 4px;
+    left: 10px;
+}
+
+
+/* 슬라이드 영역: 좌우 */
+.visual{
+    clear: both;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+
+/* what you want 영역 */
+
+section.contents1 .inner{
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    clear: both;
+    position: relative;
+    padding-left: 40px;
+}
+
+section.contents1 .inner li{
+    float: left;
+}
+
+section.contents1 h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.contents1 p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+section.contents1 ul li{
+    overflow: hidden;
+}
+
+section.contents1 ul li a:hover img{
+    transform: scale(1.4);
+}
+
+section.contents1 ul li a img{
+    transition : all 2.5s ease;   
+}
+
+section.contents1 img{
+    width: 200px;
+}
+
+
+/* make you lovely 영역 */
+
+section.contents2{
+    width: 100%;
+    height: 1080px;
+    margin-top: 50px;
+}
+
+section.contents2 .miumiu-bg1{
+    opacity: 50%;
+}
+
+section.contents2 h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+}
+
+section.contents2 p{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    top: 40px;
+}
+
+section.contents2 .left-slide{
+    width: 40%;
+    height: 60%;
+    overflow: hidden;
+    position: absolute;
+    left: 20px;
+
+}
+
+section.contents2 .right-contents{
+    width: 55%;
+    height: 62%;
+    overflow: hidden;
+    position: relative;
+    right: -400px;
+    top: -50px;
+
+}
+
+section.contents2 .right-contents ul li{
+    float: left;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+
+}
+
+
+section.contents2 .right-contents ul li:nth-child(1):hover{
+    content: url(../image/bag1_hover.png);
+}
+section.contents2 .right-contents ul li:nth-child(2):hover{
+    content: url(../image/bag2_hover.png);
+}
+
+section.contents2 .right-contents ul li:nth-child(3):hover{
+    content: url(../image/bag3_hover.png);
+}
+section.contents2 .right-contents ul li:nth-child(4):hover{
+    content: url(../image/bag4_hover.png);
+}
+
+/* 뉴스&이벤트 영역 */
+section.news{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+section.news .new-bg{
+    width: 140px;
+    height: 856;
+    position: absolute;
+    right: 70px;
+    opacity: 50%;
+}
+
+section.news h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 70px;
+}
+
+section.news p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+section.news .swiper-button-next{
+    color: #fff;
+    opacity: 50%;
+    right: 8px;
+    top: 350px;
+}
+
+
+section.news .swiper-button-prev{
+    color: #fff;
+    opacity: 50%;
+    right: 8px;
+    top: 350px;
+}
+
+section.news .swiper-pagination{
+    top: 550px;
+}
+
+
+/* 인스타그램 영역 */
+.instargram{
+    width: 100%;
+    height: 500px;
+}
+
+.instargram .inner h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.instargram .inner p{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.mySwiper2 .swiper-slide{
+    text-align: center;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    height: 300px;
+    background: #F1F1F1;
+    margin: auto;   
+}
+
+footer .bottom-logo{
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: 50px;
+}
+
+footer address{
+    width: 900px;
+    height: 110px;
+    position: relative;
+    bottom: 110px;
+    left:250px;
+    font-size: 13px;
+}
+
+footer ul.menu{
+    width: 500px;
+    display: flex;
+    position: relative;
+    top:150px;
+    left: 250px;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+footer .sns{
+    width: 150px;
+    height: 100px;
+    position: relative;
+    left: 700px;
+    top: 170px;
+}
+
+footer div.sns ul{display: flex;justify-content: space-around;}
+
+footer p{
+    width: 600px;
+    position: relative;
+    left:300px;
+    bottom: 30px;
+    font-size: 13px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* pc----------------- */
+@media all and (min-width:1200px){
+.wrap{
+    width: 100%;
+    background: #fff;
+
+}
+
+.pc-nav{display: block;}
+.menu-toggle-btn{display: none;}
+
+.inner{
+    width: 1200px;
+    margin: auto;
+    position: relative;
+    min-width: 1200px;
+}
+
+/* 헤더 영역 */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+    height: 100px;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+header > div.inner{
+    height: 114px;
+}
+header .logo{
+    width: 50%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+}
+header div.sub-menu{display: flex;position: absolute;right: 20px;top: 50px;font-family: Arial, Helvetica, sans-serif;}
+header div.sub-menu ul.login-menu{display: flex;}
+header div.sub-menu ul.login-menu li{position: relative;}
+header div.sub-menu ul.login-menu li:first-child:before{display: none;}
+header div.sub-menu ul.login-menu li a{font-size: 12px;display: block;padding: 10px 10px;color: #fff;}
+
+
+header .icons{
+    display: flex;
+    position: relative;
+    right: 0;
+    bottom: 5px;
+    top: 5px;
+}
+header .icons li:nth-child(2){
+    position: relative;
+    top: 4px;
+    left: 10px;
+}
+
+
+/* 1차메뉴 */
+nav{
+	width: 1000px;
+    position: absolute;
+    left: 260px;
+    top: -60px;
+}
+
+nav .menu > li{
+	float: left;
+	width: 130px;
+	height: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+nav .menu>li>a{
+	line-height: 30px;
+	text-align: center;
+	color: #ffffff;	
+}
+nav .menu>li>a:hover{
+    color: #333;
+}
+
+nav .submenu{
+	display: none;
+}
+nav .submenu>li{
+	width: 130px;
+	height: 20px;
+    line-height: 30px;
+}
+nav .submenu>li>a{
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+}
+nav .submenu>li>a:hover{
+    color: #333;
+}
+
+/* 슬라이드 영역: 좌우 */
+.visual{
+    clear: both;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* what you want 영역 */
+
+section.contents1 .inner{
+    width: 1200px;
+    height: 1400px;
+    margin-top: 100px;
+    clear: both;
+    position: relative;
+}
+
+section.contents1 img{
+    width: 550px;
+    height: 600px;
+}
+
+
+section.contents1 .inner li{
+    float: left;
+}
+
+section.contents1 h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.contents1 p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+section.contents1 ul li{
+    overflow: hidden;
+}
+
+section.contents1 ul li a:hover img{
+    transform: scale(1.4);
+}
+
+section.contents1 ul li a img{
+    transition : all 2.5s ease;   
+}
+
+
+/* make you lovely 영역 */
+
+section.contents2{
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+section.contents2 .miumiu-bg1{
+    opacity: 50%;
+}
+
+section.contents2 h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+}
+
+section.contents2 p{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    top: 40px;
+}
+
+section.contents2 .left-slide{
+    width: 600px;
+    height: 700px;
+    overflow: hidden;
+    position: absolute;
+    left: 200px;
+
+}
+
+section.contents2 .right-contents{
+    width: 700px;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
+    right: -800px;
+    top: -40px;
+    padding-left: 20px;
+
+}
+
+section.contents2 .right-contents ul li{
+    float: left;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+}
+
+section.contents2 .right-contents ul li:nth-child(1):hover{
+    content: url(../image/bag1_hover.png);
+}
+section.contents2 .right-contents ul li:nth-child(2):hover{
+    content: url(../image/bag2_hover.png);
+}
+
+section.contents2 .right-contents ul li:nth-child(3):hover{
+    content: url(../image/bag3_hover.png);
+}
+section.contents2 .right-contents ul li:nth-child(4):hover{
+    content: url(../image/bag4_hover.png);
+}
+
+
+/* 뉴스&이벤트 영역 */
+section.news{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    top: 200px;
+}
+section.news .new-bg{
+    width: 140px;
+    height: 856;
+    position: absolute;
+    right: 70px;
+    opacity: 50%;
+}
+
+section.news h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+section.news p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+section.news .swiper-button-next{
+    color: #333;
+    opacity: 50%;
+    right: -50px;
+    top: 430px;
+}
+
+section.news .swiper-button-prev{
+    color: #333;
+    opacity: 50%;
+    left: -50px;
+    top: 430px;
+}
+
+section.news .swiper-pagination{
+    top: 650px;
+}
+
+
+/* 뉴스&이벤트 슬라이드 */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide .newsimg {
+    display: block;
+}
+
+.swiper-button-next{
+    position: relative;
+    right: 100px;
+}
+
+/* 인스타그램 영역 */
+.instargram{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 50px;
+}
+
+.instargram .inner h2{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.instargram .inner p{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.mySwiper2 .swiper-slide{
+    text-align: center;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    height: 300px;
+    background: #F1F1F1;
+    margin: auto;   
+}
+
+footer .bottom-logo{
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: 50px;
+}
+
+footer address{
+    width: 900px;
+    height: 110px;
+    position: relative;
+    bottom: 110px;
+    left:500px;
+    font-size: 13px;
+}
+
+footer ul.menu{
+    width: 500px;
+    display: flex;
+    position: relative;
+    top:150px;
+    left: 350px;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+footer .sns{
+    width: 150px;
+    height: 100px;
+    position: relative;
+    left: 1100px;
+    top: 120px;
+}
+
+footer div.sns ul{display: flex;justify-content: space-around;}
+
+footer p{
+    width: 600px;
+    position: relative;
+    left:500px;
+    bottom: 30px;
+    font-size: 13px;
+}
+
+}
+
